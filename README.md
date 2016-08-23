@@ -1,4 +1,4 @@
-# setup Behat
+# Setup Behat
 
 Before you start:
 - Ensure that you have PHP 5.3+. installed
