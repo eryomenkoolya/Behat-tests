@@ -3,14 +3,12 @@ Feature: Search
   As a website user
   I should be able to perform a search
 
-  Background:
-    Given I am on "/"
-
+  @javascript
   Scenario Outline: Main search on the home page
+    Given I am on "/"
     When I fill in search field with "<search_query>"
     And I wait for 3 seconds
     Then I should see "<result>"
-    And I click button to load more results
 
     Examples:
       | search_query          | result                           |

@@ -50,6 +50,16 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     }
 
     /**
+     * @Then I should see :number block elements
+     */
+    public function iShouldSeeBlockElements($number)
+    {
+        $singlePosts = $this->getPage()->findAll('css', '.single-post');
+        $actualNumber = count($singlePosts);
+        assert($actualNumber == $number, 'The number of elements does not equal ' . $number);
+    }
+
+    /**
      * @Then I click button to load more results
      */
     public function iClickButtonToLoadMoreResults()
@@ -61,5 +71,4 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
             echo "Could not find load more button and click on it!";
         }
     }
-
 }
