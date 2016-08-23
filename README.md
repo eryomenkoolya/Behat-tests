@@ -17,7 +17,8 @@ Selenium library is one of the ways to test JS by opening up a real browser.
 
 This will initialize Behat, in other words create "features" folder, a "bootstrap" folder and the FeatureContext.php inside the "bootstrap" folder.
 
-3) Behat configuration:</br>
+3) Behat configuration:
+
 Create behat.yml file in the project directory. Specify as many configurations as you need. 
 For example, below we indicate that Behat should read step definitions from FeatureContext and MinkContext.
 Also  we configure Mink extension, browser name and base url. 
