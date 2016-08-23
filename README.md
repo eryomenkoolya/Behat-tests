@@ -1,4 +1,4 @@
-# setup Behat
+# Setup Behat
 
 Before you start:
 - Ensure that you have PHP 5.3+. installed
@@ -15,7 +15,8 @@ $ vendor/bin/behat --init
 This will initialize Behat, in other words create "features" folder, a "bootstrap" folder and the FeatureContext.php inside the "bootstrap" folder.
 
 3) Behat configuration
-Create behat.yml file in the project directory. Specify as many configurations as you need. For example, below we indicate that Behat should read step definitions from FeatureContext and MinkContext.
+Create behat.yml file in the project directory. Specify as many configurations as you need. 
+For example, below we indicate that Behat should read step definitions from FeatureContext and MinkContext.
 Also  we configure Mink extension, browser name and base url. 
 
 default:
