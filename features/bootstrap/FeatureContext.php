@@ -33,6 +33,15 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     }
 
     /**
+     * @When I fill in search field with :query
+     */
+    public function iFillInSearchFieldWith($query)
+    {
+        $searchField = $this->getPage()->find('css', '#edit-query');
+        $searchField->setValue($query);
+    }
+
+    /**
      * @When I wait for :time seconds
      */
     public function iWaitForSeconds($time)
