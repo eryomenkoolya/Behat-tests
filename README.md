@@ -18,7 +18,7 @@ This will initialize Behat, in other words create "features" folder, a "bootstra
 Create behat.yml file in the project directory. Specify as many configurations as you need. 
 For example, below we indicate that Behat should read step definitions from FeatureContext and MinkContext.
 Also  we configure Mink extension, browser name and base url. 
-
+```javascript
 default:
     suites:
         default:
@@ -31,6 +31,6 @@ default:
             selenium2: ~
             browser_name: 'chrome'
             base_url: https://www.wider.unu.edu
-
+```
 Now you are ready to create and run Behat tests!
 
