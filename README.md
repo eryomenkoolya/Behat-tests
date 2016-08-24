@@ -5,9 +5,12 @@
 - Install Composer
 
 ###1) Run the following commands in the project directory:
-> $ composer require behat/mink-extension behat/mink-goutte-driver
-
-> $ composer require behat/mink-selenium2-driver
+```sh
+$ composer require behat/mink-extension behat/mink-goutte-driver
+```
+```sh
+$ composer require behat/mink-selenium2-driver
+```
 
 This will create composer.json file, download and install Behat, Mink and related libraries. All libraries will be downloaded to "vendor" folder. Also compoer.lock file will be created.
 
@@ -17,8 +20,9 @@ For convenience you may create file with an extension “.bat” and specify pat
 From now you can run selenium server and browser driver with double click on the file.
 
 ###2) To initialize Behat, run in the same directory: 
-> $ vendor/bin/behat --init
-
+```sh
+$ vendor/bin/behat --init
+```
 This will create "features" and "bootstrap" folders and the FeatureContext.php inside the "bootstrap" folder.
 
 ###3) Behat configuration:
