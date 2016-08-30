@@ -11,8 +11,6 @@ use Behat\MinkExtension\Context\RawMinkContext;
  */
 class FeatureContext extends RawMinkContext implements Context, SnippetAcceptingContext
 {
-    private $output;
-
     /**
      * Initializes context.
      *
@@ -33,6 +31,14 @@ class FeatureContext extends RawMinkContext implements Context, SnippetAccepting
     }
 
     /**
+     * @When I wait for AJAX to finish
+     */
+    public function iWaitForAjaxToFinish()
+    {
+        $this->getSession()->wait(3000, "window.__behatAjax === false && (0 === jQuery.active && !jQuery(':animated').length)");
+    }
+
+      /**
      * @When I fill in search field with :query
      */
     public function iFillInSearchFieldWith($query)

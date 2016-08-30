@@ -7,7 +7,7 @@ Feature: Search
   Scenario Outline: Main search on the home page
     Given I am on "/"
     When I fill in search field with "<search_query>"
-    And I wait for 3 seconds
+    And I wait for AJAX to finish
     Then I should see "<result>"
 
     Examples:
